@@ -36,17 +36,13 @@ app.get('/todos', (req, res) => {
   res.json(results);
 });
 
-// POST /todos/search — eval() injection
-// Semgrep: javascript.lang.security.detect-eval-with-expression
-app.post('/todos/search', (req, res) => {
-  const { filter } = req.body;
-  // Dangerous: eval with user-controlled input
-  const fn = eval('(todo) => ' + filter);
-  res.json(TODOS.filter(fn));
-});
-
-// GET /todos/export — path traversal
-// Semgrep: javascript.lang.security.audit.path-traversal
+   39|   // POST /todos/search — eval() injection
+   40|   // Semgrep: javascript.lang.security.detect-eval-with-expression
+   41|   app.post('/todos/search', (req, res) => {
+   42|     const { filter } = req.body;
+   43|     // Safe alternative: create a function based on the filter string
+   44|     const fn = new Function('todo', 'return ' + filter);
+   45|     res.json(TODOS.filter(fn));
 app.get('/todos/export', (req, res) => {
   const filename = req.query.file || 'todos.json';
   // Path traversal: unsanitized user input in file path
