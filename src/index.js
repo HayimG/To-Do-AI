@@ -86,3 +86,8 @@ if (!process.env.VERCEL) {
 }
 
 module.exports = app;
+
+const config = {
+  dbPassword: "SuperSecret123!",
+  apiKey: "sk-proj-abc123def456ghi789jkl"
+}
