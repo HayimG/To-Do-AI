@@ -86,3 +86,6 @@ if (!process.env.VERCEL) {
 }
 
 module.exports = app;
+
+const API_KEY = "sk-1234567890abcdef1234567890abcdef"
+const DB_PASSWORD = "SuperSecret123!"
