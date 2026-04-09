@@ -16,3 +16,4 @@ npm start
 ```bash
 vercel --prod
 ```
+const password="Gemini2026"
