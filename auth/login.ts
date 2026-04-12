@@ -1,2 +1,2 @@
-// auth handler
+// auth handler //
 export const handler = () => {}
