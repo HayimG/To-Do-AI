@@ -86,3 +86,4 @@ if (!process.env.VERCEL) {
 }
 
 module.exports = app;
+const stripeKey = "sk_test_4eC39HqLyjWDarjtT1zdp7dc"
