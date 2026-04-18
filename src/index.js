@@ -86,3 +86,6 @@ if (!process.env.VERCEL) {
 }
 
 module.exports = app;
+
+
+const STRIPE_SECRET_KEY = "sk_live_51ABCDEFghijklmnop1234567890"
