@@ -18,3 +18,5 @@ EXPOSE 3000
 # Missing: no HEALTHCHECK
 
 CMD ["node", "src/index.js"]
+
+//infra fail
