@@ -1,2 +1,2 @@
 // auth handler
-export const handler = () => {}
+export const handler = () => {} // test
